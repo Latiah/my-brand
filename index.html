@@ -9,16 +9,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     <title>My portifolio</title>
     </head>
     <body>
+        <div class="container"></div>
+         <div class="nav">
         <nav>
-    <div class="nav">
-        <a  class="active" href="#Home">Home</a>
-          <a href="#About">About</a>
-       <a href="#Skills">Skills</a>
-        <a href="#My work">My work</a>
-        <a href="#Blogs">Blogs</a>
-        <a href="#Contact">Contact Me</a>
-         </div>
+       <ul id="sidemenu">
+        <li><a  class="active" href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+       <li><a href="#">Skills</a></li>
+        <li><a href="#">My work</a></li>
+       <li> <a href="#">Blogs</a></li>
+        <li><a href="#">Contact Me</a></li>
+         <i class="fa fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa fa-bars" onclick="openmenu()"></i>
     </nav>
+    </div>
     <div class="landing">
         <div class="introduction"><p>Hello, I'm</p>
         <p class="names">Latifah <span class="highlight">AKIMANA</span></p>
@@ -40,6 +45,7 @@ I am able to work independently in busy environments and also within a team sett
      <div class="title">Skills</div>
     <div class="skills">
         <div class="card1">
+            <i class="fa-solid fa-code"></i>
             <div class="subt">Designing</div>
             <p>I design cards including </p>
             <li>Business cards</li>
@@ -121,7 +127,7 @@ and Sqlite as the storage database</p>
         <ul> 
         <div class="subtitle">Contants</div>
         <li><i class="fa fa-phone"></i>  0784964814</li>
-          <li><i class="fa fa-location"></i> Kigali, Rwanda</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i> Kigali, Rwanda</li>
             <li><i class="fa fa-envelope"></i> kimtifah2@gmail.com</li>
             </div>  
         </ul>
@@ -149,5 +155,18 @@ and Sqlite as the storage database</p>
         </div>
             </div>
     </footer>
+</div>
+    <script>
+        var sidemnu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+
+        }
+         function closemenu(){
+            sidemenu.style.right="-200px";
+
+        }
+
+    </script>
 </body>
 </html>
