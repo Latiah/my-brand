@@ -18,6 +18,7 @@ padding:20px;
 .lform{
     margin-left:50px;
 }
+
 .login_email{
     width:243px;
     height:41px;
@@ -56,13 +57,20 @@ label{
 }
 /*------Dashboard---*/
 .dashboard{
-    padding:30px;
-    margin-top:80px;
+    padding:20px;
+    margin-top:20px;
 }
 .line{
-    padding: 4px;
-    background-color: #803E2F;
+border:1px solid #803E2F;
+height:550px;
+   margin-top:0; 
    
+}
+.adminTitle{
+    text-align: center;
+
+    color:#fff;
+    
 }
 .admin a{
     text-decoration:none;
@@ -98,19 +106,65 @@ width:746px;
 height:120px;
 }
 .mesg{
-    padding:10px;
+    margin-top:0px;
+     margin-left:20px;
+    display:flex;
+    justify-content:space-between;
 }
-/*.icon{
-    padding:10px;
-}*/
+.mesg p{
+color:#000;
+}
+.mesg p .fa{
+    margin-right:20px;
+    color:#000;
+}
+.icon{
+    margin-top:0;
+    margin-left:20px;
+     color:#000;
+}
+p .icon{
+  margin-right:10px;   
+}
+.numbers{
+    color:#fff;
+}
 .notifications{
-    margin-top:70px;
+    margin-top:20px;
     padding:30px;
+}
+.blg{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+.blg p{
+    margin-left:20px;
+    margin-right:20px;
+    color:#000;
+}
+.blog-icons{
+    display:flex;
+    /*justify-content: space-evenly;*/
+}
+.blog-icons p{
+    margin-right:150px;
+}
+.blogs-written{
+    background: #803E2F;
+    padding:10px;
+    width:1030px;
+    height:30px;
+    margin-top:30px;
+}
+.btitles{
+    display:flex;
+    justify-content: space-between;
 }
 .form{
     width:100%;
 }
-.blg{
+.blog-section{
     background:#803E2F;
     margin-left:30px;
     width:746px;
@@ -337,7 +391,7 @@ hr{
     margin-left:20px;
     background-color:#803E2F;
     margin-bottom:20px;
-    padding-top:80px;
+    padding-top:10px 20px;
     width:448px;
     height:280px;
     text-align:center;

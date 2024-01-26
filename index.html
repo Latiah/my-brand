@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My portifolio</title>
     </head>
     <body>
-       
         <div class="nav">
         <nav>
        <ul id="sidemenu">
         <li><a  class="active" href="#">Home</a></li>
-         <li><a href="#">About</a></li>
-       <li><a href="#">Skills</a></li>
-        <li><a href="#">My work</a></li>
-       <li> <a href="#">Blogs</a></li>
-        <li><a href="#">Contact Me</a></li>
+         <li><a href="#about">About</a></li>
+       <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">My work</a></li>
+       <li> <a href="#blog">Blogs</a></li>
+        <li><a href="#contact">Contact Me</a></li>
          <i class="fa fa-times" onclick="closemenu()"></i>
         </ul>
         <i class="fa fa-bars" onclick="openmenu()"></i>
     </nav>
     </div>
-    <div class="landing">
+    <div class="landing" id="Home">
         <div class="introduction"><p>Hello, I'm</p>
         <p class="names">Latifah <span class="highlight">AKIMANA</span></p>
         <p>I'm a passionate software engineer</p></div>
@@ -32,7 +31,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     </div>
     </div>
     <hr/>
-     <div class="title">About me</div>
+     <div class="title" id="about">About me</div>
     <div class="about-section">
        <div><img class="profile" src="latifah A.jpg" alt="profile"/></div>
 <div class="about"><p>I am currently a student at university of Rwanda doing computer and software engineering  
@@ -42,7 +41,7 @@ I am able to work independently in busy environments and also within a team sett
 </div>
     </div>
     <hr/>
-     <div class="title">Skills</div>
+     <div class="title" id="skills">Skills</div>
     <div class="skills">
         <div class="card1">
             <i class="fa-solid fa-code"></i>
@@ -73,7 +72,7 @@ I am able to work independently in busy environments and also within a team sett
         </div>
     </div>
     <hr/>
-    <div class="title">My work</div>
+    <div class="title" id="work">My work</div>
     <div class="work">
         <div class="card4">
             <div class="subtitles">A to do list App</div>
@@ -94,7 +93,7 @@ and Sqlite as the storage database</p>
     </div>
     </div>
     <hr/>
-   <div class="title">Blogs</div>
+   <div class="title" id="blog">Blogs</div>
  <div class="title2">Latest Blogs</div>
     <div class="blog1">
        <div class="blogs"> <div class="subt">A Practical Guide for Developers
@@ -109,7 +108,7 @@ and Sqlite as the storage database</p>
     </div>
     <img src="developer.jpg"alt="" class="images"/>
     </div>
-    <div class="title">Contact Me</div>
+    <div class="title" id="contact">Contact Me</div>
     <div class="contact">
        <div class="short">Get in touch
     <p>Let's work together</p></div>
