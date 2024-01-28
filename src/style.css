@@ -3,7 +3,38 @@ body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+:root{
+    --nav-height: 60px;
+}
+*{
+      box-sizing: border-box;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#803E2F;
+    height: var(--nav-height);
+    padding: 0 20px;
+    position: relative;
+}
+.nav i{
+    font-size: 1.4rem;
+    padding: 0 10px;
+    display: none;
+}
+.nav i:hover{
+    background: #1F1D20;
+}
+.nav .links a{
+    text-decoration: none;
+    padding: 3px;
+    /*margin-right: 105px;*/
+}
+.nav .links a:hover{
+    color: #fff;
+    background:  #803E2F;
 }
 .container{
     max-width: 555px;
@@ -124,6 +155,11 @@ label{
 .nav{
     display:flex;
    justify-content: space-between;
+}
+.nav a{
+    text-decoration:none;
+    font-size:24px;
+    color:#fff;
 }
 /*------Dashboard---*/
 .navbar{
@@ -316,24 +352,14 @@ p .icon{
     width:746px;
 height:120px;
 }
-/*--- navigation */
-/*nav a{
-    text-decoration: none;
-    color:white;
-    font-size:20px;
-    margin-right:20px;
-    transition:30ms ease-in-out;
-}*/
-nav a:hover{
-    color:#803E2F;
-}
+
 .github3{
     text-decoration: none;
     border-radius:10px;
     padding:8px 20px;
     color:#000;
     background-color:#fff;
-    margin-top:110px;
+    margin-top:20px;
     border:1px solid #fff;
     margin-left:40px;
 }
@@ -344,7 +370,7 @@ nav a:hover{
     padding:8px 20px;
     color:#000;
     background-color:#fff;
-    margin-top:130px;
+    margin-top:20px;
     border:1px solid #fff;
     margin-left:40px;
 }
@@ -426,7 +452,7 @@ footer{
     background-color: #803E2F;;
 }
 .about{
-margin-left:125px;
+/*margin-left:125px;*/
  margin-right:20px;
 }
 .skills{
@@ -544,23 +570,14 @@ hr{
 .contact{
     display:flex;
 }
-.nav{
-    display:flex;
-   justify-content: space-between;
-}
-nav a{
-    text-decoration: none;
-    color:white;
-    font-size:20px;
-    margin-right:20px;
-}
+
 .short{
     margin-left:20px;
     background-color:#803E2F;
  padding:10px 20px;
     margin-bottom:20px;
     width:448px;
-    height:280px;
+    height:267px;
     text-align:center;
     font-size:24px;
 }
@@ -589,7 +606,7 @@ nav a{
     
 }
 .button{
-    width:485px;
+    width:463px;
     height:38px;
     border-radius:15px;
      padding:10px; 
@@ -621,11 +638,31 @@ nav a{
 .link a{
 text-decoration:none;
 color:#000;
-}
-nav .fa{
-   display:none;
+margin-right:30px;
+
 }
 /*---css for phone--*/
+@media only screen and (max-width: 620px){
+    .nav i{
+        display: block;
+    }
+    .links {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: var(--nav-height);
+        background:#1F1D20;
+        left: 0;
+        right: 0;
+        border-top: 2px solid #aaa;
+    }
+    .responsive{
+        display: flex;
+    }
+    .links a{
+        color: #fff;
+    }
+}
 @media only screen and (max-width:600px){
           
     body{
@@ -643,35 +680,11 @@ margin-left:0;
     width: 100%;
     height: auto;
 }
-nav .fa{
-   display:block;
-   font-size:25px;
-}
-nav ul{
-    background:#803E2F;
-    position:fixed;
-    top:0;
-    right:-200px;
-    width:200px;
-    height:100vh;
-    padding-top:10px;
-z-index:2;
-transition: right 0.6s;
-}
-nav ul li{
-    display:block;
-    margin:25px;
-}
-nav ul .fa{
-    position:absolute;
-    top:25px;
-    left:25px;
-    cursor:pointer;
-}
+
 hr{
      width:100%;
 }
-.github{
+.github, .github3{
     margin-top:60px;
 }
  .profile, .about-section, .skills, .work, .contact, .short{
@@ -680,10 +693,7 @@ hr{
         margin-left: 0;
         margin-right: 0;
     }
-    nav ul li:hover{
-        color:black;
 
-    }
     .email, .name, .message, .button{
         width:95%;
          margin-left: 0;

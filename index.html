@@ -8,24 +8,22 @@
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>My portifolio</title>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">-->
+<title>My portifolio</title>
     </head>
     <body>
-         <nav>
+       
         <div class="nav">
-        
-       <!--<ul id="sidemenu">-->
-        <a  class="active" href="#">Home</a>
+       <i class="fa fa-navicon" id="menu"></i>
+        <div class="links" id="links">
+        <a href="#">Home</a>
          <a href="#about">About</a>
        <a href="#skills">Skills</a>
         <a href="#work">My work</a>
        <a href="#blog">Blogs</a>
         <a href="#contact">Contact Me</a>
-         <!--<i class="fa fa-times" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa fa-bars" onclick="openmenu()"></i>
-    -->   </div>
-    </nav>
+       </div>
+ </div>
     <div class="landing" id="Home">
         <div class="introduction"><p>Hello, I'm</p>
         <p class="names">Latifah <span class="highlight">AKIMANA</span></p>
@@ -137,19 +135,19 @@ and Sqlite as the storage database</p>
             <li><i class="fa fa-envelope"></i> kimtifah2@gmail.com</li>
             </div>  
         </ul>
-            <div class="links">
+            <div class="importantlinks">
                  <div class="subtitle">Important Links</div>
                  <ul>
                    <div class="link">
-        <li>Home</li>
-          <li>About</li>
-        </div>
+        <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+                   </div>
             <div class="link">
-                <li>Skills</li>
-            <li>Blogs</li></div>
+                <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blogs</li></a></div>
             <div class="link">
-                <li>My work</li></div>
-            <div class="link"><a href="login.html"><li>Dashbord</li></a></div>
+                <li><a href="#work">My work</a></li>
+            <li><a href="login.html">Dashbord</li></a></div>
             </ul>
             </div>
             <div class="social">
@@ -163,15 +161,13 @@ and Sqlite as the storage database</p>
     </footer>
 </div>
     <script>
-       var sidemnu=document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right="0";
+       let menuBtn = document.getElementById("menu");
+let links = document.getElementById("links");
 
-        }
-         function closemenu(){
-            sidemenu.style.right="-200px";
-
-        }
+menuBtn.addEventListener("click", function (e) {
+  links.classList.toggle("responsive");
+  menuBtn.classList.toggle("fa-x");
+});
 
     </script>
 </body>
