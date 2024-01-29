@@ -51,6 +51,10 @@ table{
     background: #803E2F;
 
 }
+.contain{
+    display:flex;
+    flex-wrap:wrap;
+}
 th{
     color:#000;
       border: 1px solid black;
@@ -63,6 +67,8 @@ table, td {
   color:#fff;
   text-align:left;
   padding:10px;
+   border-collapse: collapse;
+            border-spacing: 0;
 }
 /* pop window*/
 .popup {
@@ -163,14 +169,29 @@ label{
 }
 /*------Dashboard---*/
 .navbar{
-    overflow:hidden;
+
+  background: #803E2F;
     position:fixed;
-    margin-top:10px;
-    width:100%;
-    margin-left:30px;
+    right:0;
+    /*flex:0 0 250px;*/
+    width:250px;
+    margin-left:20px;
+    border-radius:5px;
+   
 }
 .navbar a{
     font-size:24px;
+    margin-left:20px;
+}
+.navbar i{
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.notifications{
+   /* margin-left:250px;*/
+    padding:20px;
+     box-sizing: border-box;
+     flex-grow: 1;
 }
 .photo{
     margin-left:70px;
@@ -197,14 +218,14 @@ height:600px;
   font-size:20px;
     
 }
-.admin a{
+/*.admin a{
     text-decoration:none;
     color:#000;
 }
 .admin{
   display:flex;  
   justify-content: center;
-}
+}*/
 .Btitle{
     border:1px solid #fff;
     width:368px;
@@ -226,10 +247,10 @@ height:600px;
     padding:10px;
 }
 .btn1:hover{
-color:#803E2F;
+color:#000;
 }
 .btn2:hover{
-color:#803E2F;
+color:#000;
 }
 .navbar a{
     color:#fff;
@@ -241,19 +262,21 @@ h1{
    /* font-weight: 2px;
     font-size:30px;*/
     text-align:center;
+    color:#fff;
 }
 .log{
- background:  #803E2F;
+ background: #1F1D20;
   width:50px;
    height:50px; 
    margin-bottom:20px;
   border-radius: 50%;
+  margin-left:10px;
 }
 .btn3:hover{
-color:#803E2F;
+color:#000;
 }
 .btn4:hover{
-color:#803E2F;
+color:#000;
 }
 .btn1{
 padding-top:20px;
@@ -280,6 +303,7 @@ color:#fff;
     margin-left:30px;
 width:746px;
 height:120px;
+border-radius:5px;
 }
 .mesg{
     margin-top:0px;
@@ -309,10 +333,10 @@ p .icon{
     color:#fff;
     font-size:20px;
 }
-.notifications{
+/*.notifications{
     margin-top:20px;
     padding:30px;
-}
+}*/
 .blg{
     margin-top:30px;
     display:flex;
@@ -351,6 +375,7 @@ p .icon{
     margin-left:30px;
     width:746px;
 height:120px;
+border-radius:5px;
 }
 
 .github3{
@@ -641,6 +666,36 @@ color:#000;
 margin-right:30px;
 
 }
+@media screen and (max-width:768px){
+    .contain{
+        flex-direction:column;
+    }
+  /*  .navbar{
+        width:100%;
+        flex:0 0 auto;
+    }*/
+    .navbar{
+        display:none;
+    }
+   /* .notifications{
+        width:100%;
+        left:0;
+    }*/
+    table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        th, td {
+            padding: 8px;}
+            /*border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }*/
+}
 /*---css for phone--*/
 @media only screen and (max-width: 620px){
     .nav i{
@@ -733,3 +788,46 @@ hr{
         margin-bottom:20px;
     }
 }
+/* @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            tr {
+                border: 1px solid #ccc;
+            }
+            
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+            }
+            th{
+                display:none;
+            }
+            
+            td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            
+            td:nth-of-type(1):before { content: "No"; }
+            td:nth-of-type(2):before { content: "Name"; }
+            td:nth-of-type(3):before { content: "Email"; }
+            td:nth-of-type(4):before { content: "Message"; }
+            td:nth-of-type(5):before { content: "Actions"; }
+            
+            
+
+        }
