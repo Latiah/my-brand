@@ -30,7 +30,6 @@ body{
 .nav .links a{
     text-decoration: none;
     padding: 3px;
-    /*margin-right: 105px;*/
 }
 .nav .links a:hover{
     color: #fff;
@@ -45,81 +44,6 @@ body{
 border-radius:10px;
 margin-top:60px;
 padding:20px;
-}
-table{
-    width:100%;
-    background: #803E2F;
-
-}
-.contain{
-    display:flex;
-    flex-wrap:wrap;
-}
-th{
-    color:#000;
-      border: 1px solid black;
-  border-collapse: collapse;
-   text-align:left;
-}
-table, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  color:#fff;
-  text-align:left;
-  padding:10px;
-   border-collapse: collapse;
-            border-spacing: 0;
-}
-/* pop window*/
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
- /* background-color: rgba(0, 0, 0, 0.5);*/
-}
-
-.popup-content {
-  background-color: #fefefe;
-  margin: 20% auto;
-  padding: 20px;
-  border: 1px solid #2e0202;
-  width: 80%;
-  max-width: 400px;
-  position: relative;
-}
-.comfirm{
-    color:black;
-    font-size:20px;
-}
-
-.close {
-  color: #5a0a0a;
-  font-size: 28px;
-  font-weight: bold;
-}
-.close1 {
-  color: #aaa;
-  float:right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.delete button{
-    padding:10px 15px;
-}
-
-.close button{
-    padding:10px 15px; 
-    margin-left:30px;
-
-}
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .lform{
@@ -166,216 +90,6 @@ label{
     text-decoration:none;
     font-size:24px;
     color:#fff;
-}
-/*------Dashboard---*/
-.navbar{
-
-  background: #803E2F;
-    position:fixed;
-    right:0;
-    /*flex:0 0 250px;*/
-    width:250px;
-    margin-left:20px;
-    border-radius:5px;
-   
-}
-.navbar a{
-    font-size:24px;
-    margin-left:20px;
-}
-.navbar i{
-    margin-right:10px;
-    margin-bottom:20px;
-}
-.notifications{
-   /* margin-left:250px;*/
-    padding:20px;
-     box-sizing: border-box;
-     flex-grow: 1;
-}
-.photo{
-    margin-left:70px;
-    margin-top:30px;
-}
-.bform button{
-padding:10px 20px;
-margin-left:350px;
-}
-.line{
-border:1px solid #803E2F;
-height:600px;
-   margin-left:100px;
-   
-   
-}
-.blogs-section{
-    margin-left:30px;
-}
-.adminTitle{
-    text-align: center;
-  color:#fff;
-  margin-top:30px;
-  font-size:20px;
-    
-}
-/*.admin a{
-    text-decoration:none;
-    color:#000;
-}
-.admin{
-  display:flex;  
-  justify-content: center;
-}*/
-.Btitle{
-    border:1px solid #fff;
-    width:368px;
-    height:43px;
-   margin-left:80px;
-    border-radius:10px;
-    padding:10px;
-}
-.bform{
-    margin-left:30px;
-}
-.Bdescription{
-    border:1px solid #fff;
-    width:368px;
-    height:60px;
-    border-radius:10px;
-    margin-left:28px;
-    margin-top:20px;
-    padding:10px;
-}
-.btn1:hover{
-color:#000;
-}
-.btn2:hover{
-color:#000;
-}
-.navbar a{
-    color:#fff;
-    justify-items: space-between;
-    
-
-}
-h1{
-   /* font-weight: 2px;
-    font-size:30px;*/
-    text-align:center;
-    color:#fff;
-}
-.log{
- background: #1F1D20;
-  width:50px;
-   height:50px; 
-   margin-bottom:20px;
-  border-radius: 50%;
-  margin-left:10px;
-}
-.btn3:hover{
-color:#000;
-}
-.btn4:hover{
-color:#000;
-}
-.btn1{
-padding-top:20px;
-transition:30ms ease-in-out;
-color:#fff;
-}
-.btn2{
-transition:30ms ease-in-out;
-padding-top:20px;
-color:#fff;
-}
-.btn3{
-transition:30ms ease-in-out;
- padding-top:20px;
- color:#fff;
-}
-.btn4{
-transition:30ms ease-in-out;
-padding-top:20px;
-color:#fff;
-}
-.msg{
-    background:#803E2F;
-    margin-left:30px;
-width:746px;
-height:120px;
-border-radius:5px;
-}
-.mesg{
-    margin-top:0px;
-     margin-left:20px;
-    display:flex;
-    justify-content:space-between;
-}
-.mesg p{
-color:#000;
-font-size:20px;
-}
-.mesg p .fa{
-    margin-right:20px;
-    color:#000;
-    font-size:20px;
-}
-.icon{
-    margin-top:0;
-    margin-left:20px;
-     color:#000;
-     font-size:20px;
-}
-p .icon{
-  margin-right:10px;   
-}
-.numbers{
-    color:#fff;
-    font-size:20px;
-}
-/*.notifications{
-    margin-top:20px;
-    padding:30px;
-}*/
-.blg{
-    margin-top:30px;
-    display:flex;
-    justify-content:space-between;
-}
-.blg p{
-    margin-left:20px;
-    margin-right:20px;
-    color:#000;
-    font-size:20px;
-}
-.blog-icons{
-    display:flex;
-    /*justify-content: space-evenly;*/
-}
-.blog-icons p{
-    margin-right:150px;
-    font-size:20px;
-}
-.blogs-written{
-    padding:10px;
-    width:800px;
-    height:30px;
-    margin-top:40px;
-    margin-left:6px;
-}
-.btitles{
-    display:flex;
-    justify-content: space-between;
-}
-.form{
-    width:100%;
-}
-.blog-section{
-    background:#803E2F;
-    margin-left:30px;
-    width:746px;
-height:120px;
-border-radius:5px;
 }
 
 .github3{
@@ -666,35 +380,6 @@ color:#000;
 margin-right:30px;
 
 }
-@media screen and (max-width:768px){
-    .contain{
-        flex-direction:column;
-    }
-  .navbar{
-        width:100%;
-        flex:0 0 auto;
-        float:top;
-    }
-   /* .navbar{
-        display:none;
-    }*/
-   /*.notifications{
-        width:100%;
-        left:0;
-        float:inline-end;
-   }*/
-   .notifications{
-    margin-top:50%;
-   }
-    table {
-            width: 100%;
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-        
-        th, td {
-            padding: 8px;}
-}
 /*---css for phone--*/
 @media only screen and (max-width: 620px){
     .nav i{
@@ -718,11 +403,6 @@ margin-right:30px;
     }
 }
 @media only screen and (max-width:600px){
-          
-    body{
-    margin-left:10px;
-    margin-right:10px;
-}
 .container{
 margin-left:0;
 }
@@ -761,7 +441,10 @@ hr{
     display:block;
     margin:0 auto;
 }
-
+.link{
+    display:flex;
+    flex-direction:column;
+}
  .card1, .card2, .card3, .card4, .card5, .card6, .blog1{
     flex-direction: column;
         width: 100%;
