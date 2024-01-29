@@ -670,17 +670,22 @@ margin-right:30px;
     .contain{
         flex-direction:column;
     }
-  /*  .navbar{
+  .navbar{
         width:100%;
         flex:0 0 auto;
-    }*/
-    .navbar{
-        display:none;
+        float:top;
     }
-   /* .notifications{
+   /* .navbar{
+        display:none;
+    }*/
+   /*.notifications{
         width:100%;
         left:0;
-    }*/
+        float:inline-end;
+   }*/
+   .notifications{
+    margin-top:50%;
+   }
     table {
             width: 100%;
             border-collapse: collapse;
@@ -689,12 +694,6 @@ margin-right:30px;
         
         th, td {
             padding: 8px;}
-            /*border-bottom: 1px solid #ddd;
-        }
-        
-        th {
-            background-color: #f2f2f2;
-        }*/
 }
 /*---css for phone--*/
 @media only screen and (max-width: 620px){
@@ -788,46 +787,3 @@ hr{
         margin-bottom:20px;
     }
 }
-/* @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-            
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            
-            tr {
-                border: 1px solid #ccc;
-            }
-            
-            td {
-                border: none;
-                border-bottom: 1px solid #eee;
-                position: relative;
-                padding-left: 50%;
-            }
-            th{
-                display:none;
-            }
-            
-            td:before {
-                position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-            }
-            
-            td:nth-of-type(1):before { content: "No"; }
-            td:nth-of-type(2):before { content: "Name"; }
-            td:nth-of-type(3):before { content: "Email"; }
-            td:nth-of-type(4):before { content: "Message"; }
-            td:nth-of-type(5):before { content: "Actions"; }
-            
-            
-
-        }
