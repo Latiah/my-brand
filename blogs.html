@@ -9,55 +9,42 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <p class="adminTitle">Blog management</p>
-    <!--<div class="admin">-->
+  <p class="adminTitle">Blogs management</p>
     <div class="navbar">
       <div class="log">
      <h1>LA</h1>
      </div>
     <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a><br/>
     <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br/>
-    <a href="index.html"  class="btn3" ><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
+    <a href="index.html"  class="btn3"><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
     <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a></div>
-    <!--<div class="line"></div>-->
     <div class="notifications">
 <div class="blogs-section">
     <form class="bform">
     <label>Title</label>
-    <input type="text" placeholder="enter title" class="Btitle"/><br/>
+    <input type="text" placeholder="enter title" name="title" id="title" class="Btitle"/><br/>
      <label>Description</label>
-    <input type="text-area" placeholder="enter description" class="Bdescription"/><br/>
+    <input type="text-area" placeholder="enter description" name="description" id="description" class="Bdescription"/><br/>
      <label>Photo</label>
-    <input type="file" class="photo"/><br/>
-    <button>Add new Blog</button>
+    <input type="file" class="photo"  name="photo" id="photo"/><br/>
+    <button onclick="Add()" id="Submit">Add new Blog</button>
+     <button onclick="update()" id="update">Update Blog</button>
     </form>
 <div class="blogs-written">
-  <table>
+  <table id="blogstable">
     <caption>Blogs posted</caption>
+    <thead>
                <tr>
                <th>No</th>
      <th>Title</th>
       <th>Description</th>
         <th>Photo</th>
-          <th colspan="2">Actions</th> 
+          <th>Actions</th> 
           </tr>
-       <tr id="row">
-           <td>1</td>
-     <td>A Practical Guide for Developers</td>
-      <td>A comprehensive guide on improving front end performance, covering topics such as lazy loading, image optimization, and caching strategies. The blog includes real-world case studies and tools for measuring performance.</td>
-        <td>develop.jpg</td>
-          <td onclick="openPopup()">Edit</td>
-        <td onclick="openPopup()">Delete</td>
-     </tr>
+          </thead>
+          <tbody> 
+          </tbody>
      </table>
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <p class="comfirm">Are you sure you want to delete this Message?</p>
-        <span class="close1" onclick="closePopup()">&times;</span>
-        <span class="delete" onclick="Delete()"><button>Yes</button></span>
-        <span class="close" onclick="closePopup()"><button>No</button></span>
-      </div>
-    </div>
 </div>
 </div>
 </div>

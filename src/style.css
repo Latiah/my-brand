@@ -4,6 +4,9 @@ body{
  margin: 0;
     padding: 0;
 }
+.error{
+    color:red;
+}
 :root{
     --nav-height: 60px;
 }

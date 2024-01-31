@@ -117,11 +117,15 @@ and Sqlite as the storage database</p>
     <div class="contact">
        <div class="short">Get in touch
     <p>Let's work together</p></div>
-        <div class="form"><form>
-            <input type="text" placeholder="your name" class="name"/><br/>
- <input type="email" placeholder="your email" class="email"/><br/>
-  <input type="text-area" placeholder="message" class="message"/><br/>
-  <button class="button">Send message</button><br/>
+        <div class="form">
+            <form id="contactForm">
+            <input type="text" placeholder="your name" id="name" class="name" name="name"/><br/>
+            <div id="nameError" class="error"></div>
+ <input type="email" placeholder="your email" id="email" class="email" name="email"/><br/>
+<div id="emailError" class="error"></div>
+  <input type="text-area" placeholder="message"  id="message" class="message" name="message"/><br/>
+  <div id="messageError" class="error"></div>
+    <button type="button" onclick="validform()" class="button">Submit</button>
         </form>
     </div>
     </div>
@@ -160,15 +164,6 @@ and Sqlite as the storage database</p>
             </div>
     </footer>
 </div>
-    <script>
-       let menuBtn = document.getElementById("menu");
-let links = document.getElementById("links");
-
-menuBtn.addEventListener("click", function (e) {
-  links.classList.toggle("responsive");
-  menuBtn.classList.toggle("fa-x");
-});
-
-    </script>
+<script src="scripts.js"></script>
 </body>
 </html>
