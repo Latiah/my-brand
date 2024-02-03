@@ -21,8 +21,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a></div>
 <div class="notifications">
 <div class="blogs-written">
-   <table>
+   <table id="submissionTable">
       <caption>messages</caption>
+      <thead>
                <tr>
                <th>No</th>
      <th>Names</th>
@@ -30,29 +31,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
         <th>Message</th>
           <th colspan="2">Actions</th> 
           </tr>
-            <tr id="row">
-           <td>1</td>
-     <td>Deborah</td>
-      <td>deborah2@gmail.com</td>
-        <td>can I work with you?</td>
-          <td  onclick="openPopup()">Reply</td>  
-     <td onclick="openPopup()"> Delete</td>
-     </tr>
+          </thead> 
      </table>
-     </div>
-    
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <p class="comfirm">Are you sure you want to delete this Blog?</p>
-        <span class="close1" onclick="closePopup()">&times;</span>
-        <span class="delete" onclick="Delete()"><button>Yes</button></span>
-        <span class="close" onclick="closePopup()"><button>No</button></span>
-      </div>
-    </div>      
+     </div>    
 </div>
 </div>
 </div>
 </div>
-<script src="script.js"></script>
+<script src="scrip.js"></script>
 </body>
  </html>

@@ -9,13 +9,18 @@
 <body>
     <div class="container">
     <div class="title">LOG IN</div>
-    <form class="lform">
+    <form class="lform" id="Loginform">
         <label>Email</label>
-        <input type="email" class="login_email"/><br/>
+        <input type="email" class="login_email" name="mail" id="mail"><br/>
+        <div class="error" id="mailError"></div>
            <label>Password</label>
-        <input type="password" class="password"/><br/>
-       <button class="login"><a href="dashboard.html">Log in</a></button>
+        <input type="password" class="password" name="password" id="password"><br/>
+        <div class="error" id="passwordError"></div>
+            <button type="button" onclick="validate()" class="login">Log in</button>
+       
+        <div class="error" id="inputError"></div>
     </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

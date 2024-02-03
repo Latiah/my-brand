@@ -6,6 +6,7 @@ body{
 }
 .error{
     color:red;
+    text-align:center;
 }
 :root{
     --nav-height: 60px;
