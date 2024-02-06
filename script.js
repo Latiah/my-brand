@@ -33,7 +33,8 @@ html +="<tr>";
 html +="<td>"+ element.title +"</td>";
 html += "<td>" + element.description + "</td>";
 html += "<td>" + element.photo + "</td>";
-html +='<td onclick="update('+index+')">Edit <td onclick="deleteData('+index+')">Delete</td>';
+
+html +='<td ><button onclick="update('+index+')">Edit </button> <button onclick="deleteData('+index+')">Delete</button></td>';
 html += "</tr>";
  });
  document.querySelector("#blogstable tbody").innerHTML=html;
