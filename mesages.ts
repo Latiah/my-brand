@@ -1,11 +1,19 @@
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Retrieve form data from local storage
   const formSubmissionsString = localStorage.getItem("formSubmissions");
   const submissionTable = document.getElementById("submissionTable");
 
-  if (formSubmissionsString) {
+  if (formSubmissionsString && submissionTable) {
     // Parse form submissions from JSON string
-    const formSubmissions = JSON.parse(formSubmissionsString);
+    const formSubmissions: ContactFormData[] = JSON.parse(
+      formSubmissionsString
+    );
 
     // Populate table with form submissions
     formSubmissions.forEach((formData, index) => {
@@ -15,43 +23,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${formData.name}</td>
                 <td>${formData.email}</td>
                 <td>${formData.message}</td>
-                <td><button><a href=mailto:${
-        formData.email
-      }>Reply</a></button> <button onclick="deleteEntry(${index})">Delete</button></td>
+                <td><button class="button"><a href="mailto:${
+                  formData.email
+                }">Reply</a></button> <button class="button" onclick="deleteEntry(${index})">Delete</button></td>
             `;
-      submissionTable.appendChild(row);
+      if (submissionTable) submissionTable.appendChild(row);
     });
   }
 });
 
 function submitForm() {
   // Get form data
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+  const messageInput = document.getElementById("message") as HTMLInputElement;
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
 
   // Validate form data
-  if (name === "" || email === "" || message === "") {
-    document.getElementById("Error").innerHTML = "Please fill in all fields.";
+  const errorElement = document.getElementById("Error");
+  if (!name || !email || !message) {
+    if (errorElement) errorElement.innerHTML = "Please fill in all fields.";
     return;
   }
 
   if (!isValidEmail(email)) {
-    document.getElementById("Error").innerHTML =
-      "Please enter a valid email address.";
+    if (errorElement)
+      errorElement.innerHTML = "Please enter a valid email address.";
     return;
   }
 
   // Retrieve form submissions from local storage
   const formSubmissionsString = localStorage.getItem("formSubmissions");
-  let formSubmissions = [];
+  let formSubmissions: ContactFormData[] = [];
 
   if (formSubmissionsString) {
     formSubmissions = JSON.parse(formSubmissionsString);
   }
 
   // Construct an object to hold form data
-  const formData = {
+  const formData: ContactFormData = {
     name: name,
     email: email,
     message: message,
@@ -68,19 +81,18 @@ function submitForm() {
 }
 
 // Function to validate email format
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function isValidEmail(email: string): boolean {
+  const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-
-function deleteEntry(index) {
+function deleteEntry(index: number) {
   // Retrieve form submissions from local storage
   const formSubmissionsString = localStorage.getItem("formSubmissions");
 
   if (formSubmissionsString) {
     // Parse form submissions from JSON string
-    let formSubmissions = JSON.parse(formSubmissionsString);
+    let formSubmissions: ContactFormData[] = JSON.parse(formSubmissionsString);
 
     // Remove entry at the specified index
     formSubmissions.splice(index, 1);
@@ -92,11 +104,3 @@ function deleteEntry(index) {
     window.location.reload();
   }
 }
-
-/*let menuBtn = document.getElementById("menu");
-let links = document.getElementById("links");
-
-menuBtn.addEventListener("click", function (e) {
-  links.classList.toggle("responsive");
-  menuBtn.classList.toggle("fa-x");
-});*/
