@@ -11,9 +11,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <body>
   <p class="adminTitle">Blogs management</p>
     <div class="navbar">
-      <div class="log">
+     <!-- <div class="log">
      <h1>LA</h1>
-     </div>
+     </div>-->
     <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a><br/>
     <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br/>
     <a href="index.html"  class="btn3"><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
@@ -26,19 +26,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
      <label>Description</label>
     <input type="text-area" placeholder="enter description" name="description" id="description" class="Bdescription"/><br/>
      <label>Photo</label>
-    <input type="file" class="photo"  name="photo" id="photo"/><br/>
+     <input type="text" placeholder="enter image URL" name="photo" id="photo" class="photo"/><br/>
     <button onclick="Add()" id="Submit">Add new Blog</button>
      <button onclick="update()" id="update">Update Blog</button>
     </form>
 <div class="blogs-written">
   <table id="blogstable">
-    <caption>Blogs posted</caption>
+    <caption>Blogs list</caption>
     <thead>
                <tr>
      <th>Title</th>
       <th>Description</th>
-        <th>Photo</th>
-          <th colspan="2"> Actions</th> 
+          <th colspan="3"> Actions</th> 
           </tr>
           </thead>
           <tbody> 

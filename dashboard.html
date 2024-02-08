@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="src/dashboard.css">
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="content">
     <p class="adminTitle">Admin Dashboard</p>
     <div class="navbar">
-        <div class="log">
-     <h1>LA</h1>
-     </div>
+        <!--<div class="log">
+  <h1>LA</h1>
+     </div>-->
          <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a><br/>
     <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br/>
     <a href="index.html"  class="btn3" ><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
@@ -24,21 +27,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <div class="mesg"><p>Messages</p>
    <p> <i class="fa fa-bell" aria-hidden="true"></i></p>
     </div>
-<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="numbers">: 24</span></p>
+<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> : <span id="messageCount"></span></p>
 </div>
 <div class="blog-section">
 <div class="blg">
 <p>Blogs</p>
  <p><i class="fa fa-bell" aria-hidden="true"></i></p></div>
  <div class="blog-icons">
-<p class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="numbers">: 24</span></p>
-<p class="icon"><i class="fa fa-comment" aria-hidden="true"></i> <span class="numbers">: 24</span></p>
-<p class="icon"><i class="fa fa-share" aria-hidden="true"></i> <span class="numbers">: 24</span></p>
+<p class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i> :<span class="likes"> </span></p>
+<p class="icon"><i class="fa fa-comment" aria-hidden="true"></i> : <span class="comments"> </span></p>
+<p class="icon"><i class="fa fa-share" aria-hidden="true"></i> : <span class="shares"> </span></p>
 </div>
 </div>
 </div>
 </div>
     <script src="script.js">
-    </script>   
+    </script>  
 </body>
 </html>
