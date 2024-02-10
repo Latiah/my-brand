@@ -33,26 +33,18 @@ function showData() {
     html += "<td>" + element.description + "</td>";
 
     html += '<td ><button onclick="update(' + index + ')">Edit </button></td>';
+   // html += '<td ><button onclick="deleteD(' + index + ')">Delete</button></td>';
     html +=
-      '<td ><button onclick="deleteD(' + index + ')">Delete</button></td>';
-    html += '<td ><button onclick="post(' + index + ')">Post</button></td>';
+      '<td ><button id="confirmButton">Delete</button></td>';
     html += "</tr>";
   });
-  document.querySelector("#blogstable tbody").innerHTML = html;
+ var answer= document.querySelector("#blogstable tbody");
+ answer.innerHTML = html;
 }
+
+
 //shows all data when page  loads
 document.onload = showData();
-/*function post(){
-  var title = document.getElementById("title").value;
-  var description = document.getElementById("description").value;
-  var photo = document.getElementById("photo").value;
-  document.querySelector(".blogs").innerHTML = title;
-  document.querySelector(".blog").innerHTML = description;
-  document.querySelector(".images").innerHTML = photo;
-  showData();
-   window.location.href = "index.html";
-}
-*/
 function Add() {
   if (validateForm() == true) {
     var title = document.getElementById("title").value;
@@ -76,12 +68,12 @@ function Add() {
     document.getElementById("photo").value = "";
   }
 }
-function deleteD(){
-  var comfirmation=confirm("Do you want to delete this blog?");
-  if(comfirmation){
-    deleteData();
+/*function deleteD() {
+  var comfirmation = confirm("Do you want to delete this blog?");
+  if (comfirmation) {
+    deleteData(index);
   }
-}
+}*/
 function deleteData(index) {
   var blogs;
   if (localStorage.getItem("blogs") == null) {
@@ -120,5 +112,5 @@ function update(index) {
       document.getElementById("Submit").style.display = "block";
       document.getElementById("update").style.display = "none";
     }
-  };
+  }
 }

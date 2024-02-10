@@ -18,10 +18,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background:#803E2F;
     height: var(--nav-height);
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     position: relative;
+    top:0;
 }
 .nav i{
     font-size: 1.4rem;
@@ -153,7 +153,13 @@ ul{
 .subtitle{
     color:#fff;
     font-size:20px;
+    margin-left:35px;
 
+}
+.subsocial{
+   color:#fff;
+    font-size:20px; 
+    margin-bottom:10px;
 }
 p{
     color:#fff;
@@ -189,14 +195,10 @@ h4{
 }
 .about-section{
     display:flex;
-    justify-content:space-between;
+    justify-content:end;
 }
 footer{
     background-color: #803E2F;;
-}
-.about{
-/*margin-left:125px;*/
- margin-right:20px;
 }
 .skills{
     display:flex;
@@ -241,14 +243,14 @@ background-color:#803E2F;
 margin-right:20px;
 width:313px;
 height:255px;
-padding:20px;
+padding:10px;
 margin-left:20px;
 border-radius:10px;
 color:white;
 }
 .card5{
 background-color:#803E2F;
-padding:20px;
+padding:10px;
 width:313px;
 height:255px;
 margin-right:20px;
@@ -272,18 +274,19 @@ border-radius:10px;
 }
 .blog1{
     display:flex;
-    justify-content: space-between;
+   /* justify-content: space-between;*/
     margin-bottom:20px;
     margin-right:20px;
     margin-left:20px;
-    
 }
 .blogs{
     background-color:white;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    padding:5px 10px;
+    width: 100%;
+  
 }
+
 .images{
  border-top-right-radius: 10px;   
 border-bottom-right-radius: 10px;
@@ -320,7 +323,7 @@ hr{
  padding:10px 20px;
     margin-bottom:20px;
     width:448px;
-    height:267px;
+    height:235px;
     text-align:center;
     font-size:24px;
 }

@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate table with form submissions
     /*var number_messages = formSubmissions.length;
     messageCount.textContent = number_messages;*/
-
     formSubmissions.forEach((formData, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
