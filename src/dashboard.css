@@ -213,8 +213,13 @@ border-radius:5px;
 }
 .blogs-written{
     margin-left:30px;
+    
 }
-
+h2{
+    text-align:center;
+    padding:10px;
+    color:white;
+}
 
 .overlay {
     display: none;

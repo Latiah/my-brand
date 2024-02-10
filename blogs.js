@@ -2,6 +2,8 @@ var blogs;
   var bloging = document.getElementById("blgs");
   var title = document.querySelector(".subt");
   var photo = document.getElementById("photo");
+ /* var blogcount = document.getElementById("likes");
+   blogcount.innerHTML = blogs.length;*/
   if (localStorage.getItem("blogs") == null) {
     blogs = [];
   } else {
@@ -17,5 +19,4 @@ var blogs;
       blg += "</div>";
     });
     bloging.innerHTML = blg;
-  
   }

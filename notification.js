@@ -25,3 +25,5 @@ counts.innerHTML = formSubmissions.length;
       submissionTable.appendChild(row);
     });
   }
+
+  
