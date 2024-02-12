@@ -1,0 +1,246 @@
+body{
+    background-color:#1F1D20;
+    font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    /*font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+ margin: 0;
+    padding: 0;
+}
+td, button{
+    padding:10px;
+
+}
+.phot{
+    display:none;
+}
+table{
+    margin-top:40px;
+    width:100%;
+    background: #803E2F;
+
+}
+button a{
+    text-decoration:none;
+    color:#000;
+}
+#update{
+    display:none;
+}
+th{
+    color:#000;
+      border: 1px solid black;
+  border-collapse: collapse;
+   text-align:left;
+}
+table, td, tbody {
+  border: 1px solid black;
+  border-collapse: collapse;
+  color:#fff;
+  text-align:left;
+  padding:10px;
+   border-collapse: collapse;
+border-spacing: 0;
+}
+label{
+color:white;
+}
+
+/*------Dashboard---*/
+.navbar{
+top:0;
+  background: #803E2F;
+    position:fixed;
+    width:250px;
+    height:100vh;
+    margin-left:20px;
+ 
+}
+.navbar a{
+    margin-top:30px;
+    font-size:24px;
+    margin-left:20px;
+     text-decoration:none;
+}
+.navbar i{
+    margin-top:20px;
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.notifications{
+   margin-left:250px;
+    padding:20px;
+     box-sizing: border-box;
+}
+
+.bform button{
+    margin-top:20px;
+padding:10px 40px;
+margin-left:340px;
+}
+.blogs-section{
+    margin-left:30px;
+}
+.adminTitle{
+    text-align: center;
+  color:#fff;
+  margin-top:40px;
+  font-size:20px;
+    
+}
+.Btitle{
+    border:1px solid #fff;
+    width:368px;
+    height:43px;
+   margin-left:80px;
+    border-radius:10px;
+    padding:10px;
+}
+.photo{
+    border:1px solid #fff;
+    width:368px;
+    height:43px;
+
+   margin-left:70px;
+    border-radius:10px;
+    padding:10px;
+}
+
+.bform{
+    margin-left:30px;
+}
+.Bdescription{
+    border:1px solid #fff;
+    width:368px;
+    height:60px;
+    border-radius:10px;
+    margin-left:28px;
+    margin-bottom:30px;
+    margin-top:20px;
+    padding:10px;
+}
+.btn1:hover{
+color:#000;
+}
+.btn2:hover{
+color:#000;
+}
+.navbar a{
+    color:#fff;
+}
+h1{
+text-align:center;
+    color:#fff;
+}
+.log{
+    margin-top:10px;
+ background: #1F1D20;
+  width:50px;
+   height:50px; 
+   margin-bottom:20px;
+  border-radius: 50%;
+  margin-left:10px;
+}
+.btn3:hover{
+color:#000;
+}
+.btn4:hover{
+color:#000;
+}
+.btn1, .btn2, .btn3, .btn4{
+padding-top:20px;
+transition:30ms ease-in-out;
+color:#fff;
+} 
+.msg{
+    background:#803E2F;
+    margin-left:30px;
+/*width:100%;*/
+padding:4px;
+margin-right:50px;
+border-radius:5px;
+}
+.mesg{
+   /* margin-top:0px;*/
+     margin-left:20px;
+    display:flex;
+    justify-content:space-between;
+}
+.mesg p{
+color:#000;
+font-size:20px;
+}
+.mesg p .fa{
+    margin-right:20px;
+    color:#000;
+    font-size:20px;
+}
+.icon{
+    margin-top:0;
+    margin-left:20px;
+     color:#000;
+     font-size:20px;
+}
+p .icon{
+  margin-right:10px;   
+}
+.numbers{
+    color:#fff;
+    font-size:20px;
+}
+.blg{
+    margin-top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+.blg p{
+    margin-left:20px;
+    margin-right:20px;
+    color:#000;
+    font-size:20px;
+}
+.blog-icons{
+    display:flex;
+}
+.blog-icons p{
+    margin-right:150px;
+    font-size:20px;
+}
+.btitles{
+    display:flex;
+    justify-content: space-between;
+}
+.blog-section{
+    background:#803E2F;
+    margin-left:30px;
+    /*width:100%;*/
+    margin-right:50px;
+border-radius:5px;
+}
+.blogs-written{
+    margin-left:30px;
+    
+}
+h2{
+    text-align:center;
+    padding:10px;
+    color:white;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: #620404;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}

@@ -4,39 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs management</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/dashboard.css">
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="admin">
-    <div class="dashboard">
-    <button class="btn1">Manage blogs <i class="fa fa-newspaper-o" aria-hidden="true"></i></button><br/>
-    <button class="btn2">Messages <i class="fa fa-envelope" aria-hidden="true"></i></button><br/>
-    <button class="btn3"><a href="index.html">Home <i class="fa fa-home" aria-hidden="true"></i></a></button><br/>
-    <button class="btn4"><a href="login.html">Log out <i class="fa fa-sign-out" aria-hidden="true"></i></a></button></div>
-<div class="line"></div>
-<span>
-    <p>Blogs management</p>
-    <form>
+  <p class="adminTitle">Blogs management</p>
+    <div class="navbar">
+     <div class="log">
+       <h2>LA</h2>
+     </div>
+    <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a><br/>
+    <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br/>
+    <a href="index.html"  class="btn3"><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
+    <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a></div>
+    <div class="notifications">
+<div class="blogs-section">
+    <form class="bform">
     <label>Title</label>
-    <input type="text" class="Btitle"/><br/>
+    <input type="text" placeholder="enter title" name="title" id="title" class="Btitle"/><br/>
      <label>Description</label>
-    <input type="text-area" class="Bdescription"/><br/>
+    <input type="text-area" placeholder="enter description" name="description" id="description" class="Bdescription"/><br/>
      <label>Photo</label>
-    <input type="file" class="photo"/><br/>
-    <button>Add new Blog</button>
-    <form>
-</span>
+    <!--<label for="photo" class="photo">upload image </label>-->
+    <!--<input type="file" id="fileInput">
+<img id="previewImage" src="#" alt="Preview Image" style="display: none;">
+      <!--<input type="file" id="photo" class="phot" /><br/>-->
+    <input type="text" placeholder="enter image URL" name="photo" id="photo" class="photo"/><br/>
+    <button onclick="Add()" id="Submit">Add new Blog</button>
+     <button onclick="update()" id="update">Update Blog</button>
+    </form>
 <div class="blogs-written">
-    <div class="btitles">
-    <p>No</p>
-     <p>Title</p>
-      <p>Description</p>
-        <p>Photo</p>
-          <p>Actions</p> 
-          </div>
+  <table id="blogstable">
+    <caption>Blogs list</caption>
+    <thead>
+               <tr>
+     <th>Title</th>
+      <th>Description</th>
+       <th>Photo</th>
+          <th colspan="2"> Actions</th> 
+          </tr>
+          </thead>
+          <tbody> 
+          </tbody>
+          <div class="overlay" id="overlay">
+    <div class="popup">
+      <p>Are you sure you want to proceed?</p>
+      <button id="confirmYes">Yes</button>
+      <button id="confirmNo">No</button>
+    </div>
+  </div>
+     </table>
 </div>
 </div>
+</div>
+</div>
+<script src="script.js"></script>
+  <script src="pop.js">
+</script>
 </body>
 </html>

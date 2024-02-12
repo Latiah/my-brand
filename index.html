@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My portifolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">-->
+<title>My portifolio</title>
     </head>
     <body>
+       
         <div class="nav">
-        <nav>
-       <ul id="sidemenu">
-        <li><a  class="active" href="#">Home</a></li>
-         <li><a href="#about">About</a></li>
-       <li><a href="#skills">Skills</a></li>
-        <li><a href="#work">My work</a></li>
-       <li> <a href="#blog">Blogs</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-         <i class="fa fa-times" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa fa-bars" onclick="openmenu()"></i>
-    </nav>
-    </div>
+       <i class="fa fa-navicon" id="menu"></i>
+        <div class="links" id="links">
+        <a href="#">Home</a>
+         <a href="#about">About</a>
+       <a href="#skills">Skills</a>
+        <a href="#work">My work</a>
+       <a href="#blog">Blogs</a>
+        <a href="#contact">Contact Me</a>
+       </div>
+ </div>
     <div class="landing" id="Home">
         <div class="introduction"><p>Hello, I'm</p>
         <p class="names">Latifah <span class="highlight">AKIMANA</span></p>
@@ -34,7 +35,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
      <div class="title" id="about">About me</div>
     <div class="about-section">
        <div><img class="profile" src="latifah A.jpg" alt="profile"/></div>
-<div class="about"><p>I am currently a student at university of Rwanda doing computer and software engineering  
+<div><p class="about">I am currently a student at university of Rwanda doing computer and software engineering  
 I am  very passionate about what I study  and do.
 My goal as a software engineer is to keep learning new skills and help people by  finding soft solutions to the  problems in the society.
 I am able to work independently in busy environments and also within a team setting</p>
@@ -44,7 +45,6 @@ I am able to work independently in busy environments and also within a team sett
      <div class="title" id="skills">Skills</div>
     <div class="skills">
         <div class="card1">
-            <i class="fa-solid fa-code"></i>
             <div class="subt">Designing</div>
             <p>I design cards including </p>
             <li>Business cards</li>
@@ -89,83 +89,84 @@ and local storage</p>
     <div class="subtitles">Course management App</div>
     <p class="projects">Using React Native 
 and Sqlite as the storage database</p>
-    <a href="https://github.com/Latiah"><button class="github">see my work  <i class="fa fa-github" ></i></button></a>
+    <a href="https://github.com/Latiah"><button class="github3">see my work  <i class="fa fa-github" ></i></button></a>
     </div>
     </div>
     <hr/>
    <div class="title" id="blog">Blogs</div>
  <div class="title2">Latest Blogs</div>
-    <div class="blog1">
+     <div class="blog1" id="blgs">
        <div class="blogs"> <div class="subt">A Practical Guide for Developers
        </div>
-<p class="blog">A comprehensive guide on improving front end performance, covering topics such as lazy loading, image optimization, and caching strategies. The blog includes real-world case studies and tools for measuring performance.</p>
-</div><img src="developer.jpg"alt=""class="images"/></div>
+<p class="blog">A comprehensive guide on improving front end performance, covering topics such as lazy loading, image optimization, and caching strategies. The blog includes real-world case studies and tools for measuring performance.
+<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+<i class="fa fa-comment" aria-hidden="true"></i>
+<i class="fa fa-share" aria-hidden="true"></i> </p>
+</div><img src="developer.jpg"alt=""class="images"/></div> 
+ <div class="blog1">
+ <div class="blogs"><div class="subt"><a href="blogspage.html">A Practical Guide for Developers
+ </a></div>
+<p class="blog">A comprehensive guide on improving front end performance, covering topics such as lazy loading, image optimization, and caching strategies. The blog includes real-world case studies and tools for measuring performance. <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+<i class="fa fa-comment" aria-hidden="true"></i>
+<i class="fa fa-share" aria-hidden="true"></i></p>   
 </div>
-<div class="blog1">
- <div class="blogs"><div class="subt">A Practical Guide for Developers
- </div>
-<p class="blog">A comprehensive guide on improving front end performance, covering topics such as lazy loading, image optimization, and caching strategies. The blog includes real-world case studies and tools for measuring performance.</p>
-    </div>
     <img src="developer.jpg"alt="" class="images"/>
     </div>
+    <hr/>
     <div class="title" id="contact">Contact Me</div>
     <div class="contact">
        <div class="short">Get in touch
     <p>Let's work together</p></div>
-        <div class="form"><form>
-            <input type="text" placeholder="your name" class="name"/><br/>
- <input type="email" placeholder="your email" class="email"/><br/>
-  <input type="text-area" placeholder="message" class="message"/><br/>
-  <button class="button">Send message</button><br/>
-        </form>
+        <div class="form">
+            <form id="contactForm">
+            <input type="text" placeholder="your name" id="name" class="name" name="name"/><br/>
+            <div id="nameError" class="error"></div>
+ <input type="email" placeholder="your email" id="email" class="email" name="email"/><br/>
+<div id="emailError" class="error"></div>
+  <input type="text-area" placeholder="message"  id="message" class="message" name="message"/><br/>
+  <div id="messageError" class="error"></div>
+    <button type="button" onclick="submitForm()" class="button">Submit</button>
+ <div id="Error" class="error"></div>        
+</form>
     </div>
-    </div>
+    </div>  
     <footer>
         <div class="footer">
     <div class="contacts">
-        <ul> 
-        <div class="subtitle">Contants</div>
+        <div class="subtitle">Contacts</div>
+        <ul>
         <li><i class="fa fa-phone"></i>  0784964814</li>
-          <li><i class="fa fa-map-marker" aria-hidden="true"></i> Kigali, Rwanda</li>
+          <li><i style='font-size:18px' class='fa fa-map-marker' ></i> Kigali, Rwanda</li>
             <li><i class="fa fa-envelope"></i> kimtifah2@gmail.com</li>
             </div>  
         </ul>
-            <div class="links">
+            <div class="importantlinks">
                  <div class="subtitle">Important Links</div>
                  <ul>
                    <div class="link">
-        <li>Home</li>
-          <li>About</li>
-        </div>
+        <!--<li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+                   </div>
             <div class="link">
-                <li>Skills</li>
-            <li>Blogs</li></div>
+                <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blogs</li></a></div>
             <div class="link">
-                <li>My work</li></div>
-            <div class="link"><a href="login.html"><li>Dashbord</li></a></div>
+                <li><a href="#work">My work</a></li>-->
+            <li><a href="login.html">Dashbord</li></a></div>
             </ul>
-            </div>
+        </div>
             <div class="social">
-                <div class="subtitle">Social media</div>
+                <div class="subsocial">Social media</div>
                <a href=" https://www.facebook.com/"><i class="fa fa-facebook" ></i></a>
                 <a href=" https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                 <a href=" "><i class="fa fa-twitter"></i></a>
-                  <a href=" "><i class="fa fa-linkedin"></i></a>
+                 <a href="  https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                  <a href="  https://www.linkendin.com/"><i class="fa fa-linkedin"></i></a>
         </div>
             </div>
     </footer>
 </div>
-    <script>
-       var sidemnu=document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right="0";
-
-        }
-         function closemenu(){
-            sidemenu.style.right="-200px";
-
-        }
-
-    </script>
+<script src="messages.js"></script>
+<script src="script.js"></script>
+<script src="blogs.js"></script>
 </body>
 </html>
