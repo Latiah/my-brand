@@ -138,6 +138,9 @@ label {
   margin-bottom: 10px;
   margin-left: 20px;
 }
+.subt a{
+  color:#000;
+}
 .subt {
      font-weight: bold;
   color: #000;
@@ -283,12 +286,13 @@ h3 {
 }
 .blog1 {
   display: flex;
-  /* justify-content: space-between;*/
+  justify-content: space-between;
   margin-bottom: 20px;
   margin-right: 20px;
   margin-left: 20px;
-}
+}   
 .blogs {
+  padding:20px;
   background-color: white;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;

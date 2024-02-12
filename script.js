@@ -3,7 +3,9 @@
 function validateForm() {
   var title = document.getElementById("title").value;
   var description = document.getElementById("description").value;
-  var photo = document.getElementById("photo").value;
+ var photo = document.getElementById("photo").value;
+   // Get the input element
+
   if (title == "") {
     alert("a title is required");
     return false;
@@ -31,11 +33,10 @@ function showData() {
     html += "<tr>";
     html += "<td>" + element.title + "</td>";
     html += "<td>" + element.description + "</td>";
-
     html += '<td ><button onclick="update(' + index + ')">Edit </button></td>';
-   // html += '<td ><button onclick="deleteD(' + index + ')">Delete</button></td>';
-    html +=
-      '<td ><button id="confirmButton">Delete</button></td>';
+   html += '<td ><button onclick="deleteD(' + index + ')">Delete</button></td>';
+    /*html +=
+      '<td ><button id="confirmButton">Delete</button></td>';*/
     html += "</tr>";
   });
  var answer= document.querySelector("#blogstable tbody");
@@ -68,12 +69,12 @@ function Add() {
     document.getElementById("photo").value = "";
   }
 }
-/*function deleteD() {
+function deleteD() {
   var comfirmation = confirm("Do you want to delete this blog?");
   if (comfirmation) {
     deleteData(index);
   }
-}*/
+}
 function deleteData(index) {
   var blogs;
   if (localStorage.getItem("blogs") == null) {

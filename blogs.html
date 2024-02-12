@@ -26,7 +26,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
      <label>Description</label>
     <input type="text-area" placeholder="enter description" name="description" id="description" class="Bdescription"/><br/>
      <label>Photo</label>
-     <input type="text" placeholder="enter image URL" name="photo" id="photo" class="photo"/><br/>
+    <!--<label for="photo" class="photo">upload image </label>-->
+    <!--<input type="file" id="fileInput">
+<img id="previewImage" src="#" alt="Preview Image" style="display: none;">
+      <!--<input type="file" id="photo" class="phot" /><br/>-->
+    <input type="text" placeholder="enter image URL" name="photo" id="photo" class="photo"/><br/>
     <button onclick="Add()" id="Submit">Add new Blog</button>
      <button onclick="update()" id="update">Update Blog</button>
     </form>
@@ -37,6 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
                <tr>
      <th>Title</th>
       <th>Description</th>
+       <th>Photo</th>
           <th colspan="2"> Actions</th> 
           </tr>
           </thead>
