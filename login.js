@@ -13,7 +13,7 @@ function validate() {
     return false;
   }
   // aunthentications
-  if (emails === "kimtifah2@gmail.com" && password === "Minetocherish2021") {
+  if (emails === "kimtifah2@gmail.com" && password === "1234567") {
     alert("Correct input you can now log in successful");
     window.location.href = "dashboard.html";
     return true;
