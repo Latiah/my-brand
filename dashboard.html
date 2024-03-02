@@ -15,33 +15,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     <div class="content">
     <p class="adminTitle">Admin Dashboard</p>
     <div class="navbar">
-        <!--<div class="log">
-  <h1>LA</h1>
-     </div>-->
-         <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a><br/>
-    <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a><br/>
-    <a href="index.html"  class="btn3" ><i class="fa fa-home" aria-hidden="true"></i> Home </a><br/>
-    <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a></div>
+       <a href="dashboard.html" ><div class="log">
+  <h2>LA</h2>
+     </div></a>
+         <a href="blogs.html" class="btn1"> <i class="fa fa-newspaper-o" aria-hidden="true"></i><span>Manage blogs</span> </a><br/>
+    <a href="messages.html" class="btn2"> <i class="fa fa-envelope" aria-hidden="true"></i> <span>Messages </span></a><br/>
+    <a href="index.html"  class="btn3" ><i class="fa fa-home" aria-hidden="true"></i> <span>Home </span></a><br/>
+    <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Log out </span></a></div>
 <div class="notifications">
 <div class="msg">
 <div class="mesg"><p>Messages</p>
    <p> <i class="fa fa-bell" aria-hidden="true"></i></p>
     </div>
-<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> : <span id="messageCount"></span></p>
+<p class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> : <span id="msegs"></span></p>
 </div>
 <div class="blog-section">
 <div class="blg">
 <p>Blogs</p>
  <p><i class="fa fa-bell" aria-hidden="true"></i></p></div>
  <div class="blog-icons">
-<p class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i> :<span class="likes"> </span></p>
-<p class="icon"><i class="fa fa-comment" aria-hidden="true"></i> : <span class="comments"> </span></p>
-<p class="icon"><i class="fa fa-share" aria-hidden="true"></i> : <span class="shares"> </span></p>
+<p class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i> :<span class="likes" id="likes"> </span></p>
+<p class="icon"><i class="fa fa-comment" aria-hidden="true"></i> : <span class="comments" id="comments"> </span></p>
+<p class="icon"><i class="fa fa-share" aria-hidden="true"></i> : <span class="shares" id="shares"> </span></p>
 </div>
 </div>
 </div>
 </div>
-    <script src="script.js">
-    </script>  
+    <script src="bloging.js"></script>
+    <script src="notification.js"></script>
 </body>
 </html>

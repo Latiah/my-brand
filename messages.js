@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate table with form submissions
     /*var number_messages = formSubmissions.length;
     messageCount.textContent = number_messages;*/
-
     formSubmissions.forEach((formData, index) => {
       const row = document.createElement("tr");
       row.innerHTML = `
@@ -103,10 +102,3 @@ function deleteEntry(index) {
   }
 }
 
-/*let menuBtn = document.getElementById("menu");
-let links = document.getElementById("links");
-
-menuBtn.addEventListener("click", function (e) {
-  links.classList.toggle("responsive");
-  menuBtn.classList.toggle("fa-x");
-});*/

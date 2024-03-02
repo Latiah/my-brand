@@ -1,13 +1,15 @@
 body{
     background-color:#1F1D20;
     font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-    /*font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
  margin: 0;
     padding: 0;
 }
 td, button{
     padding:10px;
 
+}
+.phot{
+    display:none;
 }
 table{
     margin-top:40px;
@@ -77,10 +79,14 @@ margin-left:340px;
     margin-left:30px;
 }
 .adminTitle{
+    top:0;
     text-align: center;
-  color:#fff;
-  margin-top:40px;
+  color:#000;
+  background-color: #803E2F;
+  padding:20px;
   font-size:20px;
+  margin-left:50px;
+margin-right:20px;
     
 }
 .Btitle{
@@ -95,7 +101,6 @@ margin-left:340px;
     border:1px solid #fff;
     width:368px;
     height:43px;
-    margin-top:20px;
    margin-left:70px;
     border-radius:10px;
     padding:10px;
@@ -110,6 +115,7 @@ margin-left:340px;
     height:60px;
     border-radius:10px;
     margin-left:28px;
+    margin-bottom:30px;
     margin-top:20px;
     padding:10px;
 }
@@ -120,7 +126,7 @@ color:#000;
 color:#000;
 }
 .navbar a{
-    color:#fff;
+    color:#000;
 }
 h1{
 text-align:center;
@@ -213,4 +219,11 @@ border-radius:5px;
 }
 .blogs-written{
     margin-left:30px;
+}
+
+ h2{
+    /*text-align:center;*/
+    padding: 5px;
+    font-size: larger;
+    color:white;
 }
