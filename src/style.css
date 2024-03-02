@@ -17,12 +17,12 @@ body {
 }
 .nav {
   display: flex;
-  align-items: center;
+margin-right:20px;
   justify-content: space-between;
   height: var(--nav-height);
-  /*padding: 0 20px;*/
+  padding: 0 20px;
   position: relative;
-  top: 0;
+  margin-top: 20px;
 }
 .nav i {
   font-size: 1.4rem;
@@ -34,11 +34,7 @@ body {
 }
 .nav .links a {
   text-decoration: none;
-  padding: 3px;
-}
-.nav .links a:hover {
-  color: #fff;
-  background: #803e2f;
+  padding: 10px;
 }
 .container {
   max-width: 555px;
@@ -142,11 +138,14 @@ label {
   color:#000;
 }
 .subt {
+  margin-top:20px;
+  margin-bottom:20px;
      font-weight: bold;
   color: #000;
   font-size: 20px;
 }
 .subtitles {
+  margin-top: 20px;
     font-weight: bold;
   color: #000;
   font-size: 20px;
@@ -202,7 +201,10 @@ h4 {
 }
 .about-section {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+.about {
+font-size:20px;
 }
 footer {
   background-color: #803e2f;
@@ -231,7 +233,6 @@ h3 {
   width: 313px;
   height: 255px;
    padding: 0.7em 4em;
-  /*padding: 20px;*/
   margin-right: 20px;
   color: white;
   border-radius: 10px;
@@ -243,7 +244,7 @@ h3 {
   height: 255px;
   margin-right: 20px;
      padding: 0.7em 4em;
-  /*padding: 20px;*/
+ 
   margin-left: 20px;
   color: white;
   border-radius: 10px;
@@ -316,8 +317,14 @@ a {
 .card1,
 .card2,
 .card3,
-li {
-  font-size: 13px;
+li, p {
+  margin-top:10px;
+  font-size: 16px;
+  list-style: none;
+}
+  .about{
+  margin-left: 115px;
+  margin-right:20px;
 }
 hr {
   height: 4px;
@@ -387,17 +394,25 @@ hr {
 .link {
   display: flex;
   justify-content: space-between;
+   font-size:20px;
+}
+.contacts li {
+    font-size:20px;
+}
+.social{
+  margin-right:30px;
 }
 .social a {
   color: #000;
+   margin-right:30px;
   text-decoration: none;
-  margin-right: 10px;
   margin-top: 20px;
+  font-size:20px;
 }
 .link a {
+   font-size:20px;
   text-decoration: none;
   color: #000;
-  margin-right: 30px;
 }
 /*---css for phone--*/
 @media only screen and (max-width: 620px) {
@@ -411,6 +426,7 @@ hr {
     top: var(--nav-height);
     background: #1f1d20;
     left: 0;
+    color: #803e2f;
     right: 0;
     border-top: 2px solid #aaa;
   }
@@ -419,6 +435,9 @@ hr {
   }
   .links a {
     color: #fff;
+  }
+  .links a:hover {
+    color:#803e2f;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -452,6 +471,7 @@ hr {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+
   }
 
   .email,
@@ -471,7 +491,6 @@ hr {
     margin: 0 auto;
   }
   .link {
-    display: flex;
     flex-direction: column;
   }
   .card1,
@@ -497,12 +516,17 @@ hr {
     width: 100%;
     margin-left: 0;
   }
-  .footer {
-    flex-direction: column;
+  
+   .about{
+    margin-left:10px;
+  margin-right:20px;
+}
+.footer{
+   flex-direction: column;
     align-items: center;
-  }
+}
   .contacts,
-  .links,
+  .importantlinks,
   .social {
     flex-direction: column;
     align-items: center;

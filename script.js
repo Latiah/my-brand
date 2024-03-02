@@ -72,7 +72,7 @@ function Add() {
 function deleteD() {
   var comfirmation = confirm("Do you want to delete this blog?");
   if (comfirmation) {
-    deleteData(index);
+    deleteData();
   }
 }
 function deleteData(index) {

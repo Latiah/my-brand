@@ -1,9 +1,6 @@
 var blogs;
   var bloging = document.getElementById("blgs");
   var title = document.querySelector(".subt");
-  // Get the input element
-  /* var blogcount = document.getElementById("likes");
-   blogcount.innerHTML = blogs.length;*/
   if (localStorage.getItem("blogs") == null) {
     blogs = [];
   } else {
