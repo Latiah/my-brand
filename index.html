@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
+       <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -123,7 +124,7 @@ and Sqlite as the storage database</p>
 <div id="emailError" class="error"></div>
   <input type="text-area" placeholder="message"  id="message" class="message" name="message"/><br/>
   <div id="messageError" class="error"></div>
-    <button type="button" onclick="submitForm()" class="button">Submit</button>
+    <button type="submit" class="button">Submit</button>
  <div id="Error" class="error"></div>        
 </form>
     </div>
@@ -163,8 +164,9 @@ and Sqlite as the storage database</p>
     </footer>
 </div>
 <script src="menu.js"></script>
-<script src="messages.js"></script>
+<!--<script src="messages.js"></script>
 <script src="script.js"></script>
-<script src="blogs.js"></script>
+<script src="blogs.js"></script>-->
+<script src="message_integration.js"></script>
 </body>
 </html>
