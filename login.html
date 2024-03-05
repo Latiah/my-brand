@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Log in page</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-    <div class="title">LOG IN</div>
-    <form class="lform" id="Loginform">
+      <div class="title">LOG IN</div>
+      <form class="lform" id="Loginform">
         <label>Email</label>
-        <input type="email" class="login_email" name="mail" id="mail"><br/>
+        <input type="email" class="login_email" name="mail" id="mail" /><br />
         <div class="error" id="mailError"></div>
-           <label>Password</label>
-        <input type="password" class="password" name="password" id="password"><br/>
+        <label>Password</label>
+        <input
+          type="password"
+          class="password"
+          name="password"
+          id="password"
+        /><br />
         <div class="error" id="passwordError"></div>
-            <button type="button" onclick="validate()" class="login">Log in</button>
-       
+        <button type="button" onclick="validate()" class="login">Log in</button>
+
         <div class="error" id="inputError"></div>
-    </form>
+      </form>
     </div>
     <script src="login.js"></script>
-</body>
+  </body>
 </html>

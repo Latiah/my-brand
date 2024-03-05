@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Sign up page</title>
   </head>
   <body>
     <div class="container">
       <div class="title">SIGN UP</div>
-      <form class="lform" id="Loginform">
+      <form class="lform" id="signform">
         <label>Email</label>
         <input type="email" class="login_email" name="mail" id="mail" /><br />
         <div class="error" id="mailError"></div>
@@ -21,9 +22,10 @@
           id="password"
         /><br />
         <div class="error" id="passwordError"></div>
-        <button type="button" onclick="validate()" class="login">
+        <!--<button type="button" onclick="validate()" class="login">
           Sign up
-        </button>
+        </button>-->
+        <button type="submit" class="login">Sign up</button>
         <p>
           If you already signed up click <a href="login.html">LOG IN</a> to
           access the dashboard
@@ -32,6 +34,6 @@
         <div class="error" id="inputError"></div>
       </form>
     </div>
-    <script src="login.js"></script>
+    <script src="signup.js"></script>
   </body>
 </html>

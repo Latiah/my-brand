@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs management</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/dashboard.css">
     <link rel="stylesheet"  
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +21,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
     <a href="login.html" class="btn4"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out </a></div>
     <div class="notifications">
 <div class="blogs-section">
-    <form class="bform">
+    <form class="bform" id="bform">
     <label>Title</label>
     <input type="text" placeholder="enter title" name="title" id="title" class="Btitle"/><br/>
      <label>Description</label>
@@ -31,7 +32,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 <img id="previewImage" src="#" alt="Preview Image" style="display: none;">
       <!--<input type="file" id="photo" class="phot" /><br/>-->
     <input type="text" placeholder="enter image URL" name="photo" id="photo" class="photo"/><br/>
-    <button onclick="Add()" id="Submit">Add new Blog</button>
+   <!-- <button onclick="Add()" id="Submit">Add new Blog</button>-->
+    <button type="submit">Add new Blog</button>
      <button onclick="update()" id="update">Update Blog</button>
     </form>
 <div class="blogs-written">
@@ -40,7 +42,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
                <tr>
      <th>Title</th>
       <th>Description</th>
-       <th>Photo</th>
           <th colspan="2"> Actions</th> 
           </tr>
           </thead>
@@ -51,7 +52,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 </div>
 </div>
 </div>
-<script src="script.js"></script>
-</script>
+<!--<script src="script.js"></script>-->
+<script src="blogs_integration.js"></script>
 </body>
 </html>

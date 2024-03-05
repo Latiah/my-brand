@@ -1,4 +1,4 @@
-var blogs;
+/*var blogs;
   var bloging = document.getElementById("blgs");
   var title = document.querySelector(".subt");
   if (localStorage.getItem("blogs") == null) {
@@ -17,4 +17,4 @@ var blogs;
   
     });
     bloging.innerHTML = blg;
-  }
+  }*/
