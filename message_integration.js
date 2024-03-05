@@ -1,25 +1,25 @@
 //all messages
 function displayMessages(response) {
   const messagesContainer = document.getElementById("messages-container");
+  const messageCount = document.getElementById("msegs");
 
   response.data.result.forEach((message, index) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-                <td>${index + 1}</td>
-                <td>${message.name}</td>
-                <td>${message.email}</td>
-                <td>${message.message}</td>
-                <td><button><a href=mailto:${
-                  message.email
-                }>Reply</a></button> </td>
-     <td><button onclick="deleting('${message._id}')">Delete</button></td>
-            `;
+          <td>${index + 1}</td>
+          <td>${message.name}</td>
+          <td>${message.email}</td>
+          <td>${message.message}</td>
+          <td><button><a href=mailto:${message.email}>Reply</a></button></td>
+          <td><button onclick="deleting('${message._id}')">Delete</button></td>
+        `;
     messagesContainer.appendChild(row);
   });
+  messageCount.innerHTML = response.data.result.length;
 }
 
 const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU1YTQzMzA2NTgxYmVkNTY4NzcyNGIiLCJlbWFpbCI6ImxpdGhhMkBnbWFpbC5jb20iLCJpYXQiOjE3MDk1NDg2MjUsImV4cCI6MTcwOTYzNTAyNX0.cLPL2JdHjxQx8d7Eoj6Cs-fIlx36-bfgtCDZdTACirM";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU3MGQzZGE2ZDkwNmViZTM5NjM0MmQiLCJlbWFpbCI6Im11dG9uaXNAZ21haWwuY29tIiwiaWF0IjoxNzA5NjQxMDQ4LCJleHAiOjE3MDk3Mjc0NDh9.2Xqugt7j0jM1vluBfuGHMXhlujqLj2n6Kon29igpIsA";
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-messages", {
     headers: {
@@ -76,7 +76,6 @@ form.addEventListener("submit", function (event) {
       nameInput.value = " ";
       emailInput.value = " ";
       messageInput.value = " ";
-      // You can perform any necessary actions after successful submission
     })
     .catch((error) => {
       console.error("Error submitting message:", error);

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Log in page</title>
   </head>
@@ -21,11 +22,11 @@
           id="password"
         /><br />
         <div class="error" id="passwordError"></div>
-        <button type="button" onclick="validate()" class="login">Log in</button>
-
+        <!--<button type="button" onclick="validate()" class="login">Log in</button>-->
+        <button type="submit" class="login">Log in</button>
         <div class="error" id="inputError"></div>
       </form>
     </div>
-    <script src="login.js"></script>
+    <script src="loginpage.js"></script>
   </body>
 </html>

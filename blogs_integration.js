@@ -36,8 +36,8 @@ function displayBlogs(response) {
   });
 }
 
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU1YTQzMzA2NTgxYmVkNTY4NzcyNGIiLCJlbWFpbCI6ImxpdGhhMkBnbWFpbC5jb20iLCJpYXQiOjE3MDk1NDg2MjUsImV4cCI6MTcwOTYzNTAyNX0.cLPL2JdHjxQx8d7Eoj6Cs-fIlx36-bfgtCDZdTACirM";
+const tokens =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU3MGQzZGE2ZDkwNmViZTM5NjM0MmQiLCJlbWFpbCI6Im11dG9uaXNAZ21haWwuY29tIiwiaWF0IjoxNzA5NjQxMDQ4LCJleHAiOjE3MDk3Mjc0NDh9.2Xqugt7j0jM1vluBfuGHMXhlujqLj2n6Kon29igpIsA";
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-blogs")
   .then(displayBlogs)
@@ -50,7 +50,7 @@ function deleting(blogId) {
       `https://myportifolio-brand-backend.onrender.com/delete-blog/${blogId}`,
       {
         headers: {
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + tokens,
         },
       }
     )
@@ -82,7 +82,7 @@ forms.addEventListener("submit", function (event) {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + tokens,
         },
       }
     )
