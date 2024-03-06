@@ -1,56 +1,102 @@
 function displayBlog(response) {
   var bloging = document.getElementById("blgs");
   let blg = "";
-  response.data.result.forEach((blog) => {
+  response.data.result.forEach((blog, index) => {
     blg += "<div class=blog-section>";
     blg += "<div class=blog1>";
     blg += "<div class=blogs>";
     blg += "<div class=subt>" + blog.title + "</div>";
     blg += "<p class=blog>" + blog.description + "<br/>";
-    blg += "<i class='fa fa-thumbs-up ' id='like' aria-hidden='true'></i>";
+    blg +=
+      "<i class='fa fa-thumbs-up' id='like-" +
+      index +
+      "' aria-hidden='true'></i>";
+    blg +=
+      "<span class='likes-count' id='likes-count-" +
+      index +
+      "'>" +
+      blog.likes +
+      "</span>";
     blg += "<i class='fa fa-comment' aria-hidden='true'></i>";
-    blg += "<i class='fa fa-share' aria-hidden='true'></i></p>";
+    blg +=
+      "<i class='fa fa-share' id='share-" + index + "' aria-hidden='true'></i>";
+    blg +=
+      "<span class='shares-count' id='shares-count-" +
+      index +
+      "'>" +
+      blog.shares +
+      "</span></p>";
     blg += "</div>";
     blg += `<img src=${blog.photo} class=images`;
     blg += "</div>";
     blg += "</div>";
   });
   bloging.innerHTML = blg;
+
+  // Add event listeners to like icons
+  for (let i = 0; i < response.data.result.length; i++) {
+    document.getElementById("like-" + i).addEventListener("click", function () {
+      likeBlog(i);
+    });
+  }
+
+  function likeBlog(blogIndex) {
+    const blogId = response.data.result[blogIndex]._id; // Assuming each blog object has an '_id' property
+    axios
+      .post(
+        `https://myportifolio-brand-backend.onrender.com/single-blog/${blogId}/like`,
+        {},
+        {
+          headers: {
+            "Content-Type": "application/json",
+            // Include any necessary authentication headers here
+          },
+        }
+      )
+      .then((response) => {
+        const likesCountElement = document.getElementById(
+          "likes-count-" + blogIndex
+        );
+        likesCountElement.innerHTML = response.data.likes;
+        alert("Thank you for liking this blog👏"); // Assuming the response contains the updated likes count
+      })
+      .catch((error) => {
+        console.error("Error occured while liking blog", error);
+      });
+  }
+  // Add event listeners to like icons
+  for (let i = 0; i < response.data.result.length; i++) {
+    document
+      .getElementById("share-" + i)
+      .addEventListener("click", function () {
+        shareBlog(i);
+      });
+  }
+
+  function shareBlog(blogIndex) {
+    const blogId = response.data.result[blogIndex]._id;
+    axios
+      .post(
+        `https://myportifolio-brand-backend.onrender.com/single-blog/${blogId}/share`,
+        {},
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        const sharesCountElement = document.getElementById(
+          "shares-count-" + blogIndex
+        );
+        sharesCountElement.innerHTML = response.data.shares;
+        alert("Thank you for sharing this blog👏");
+      })
+      .catch((error) => {
+        console.error("Error occured while sharing this blog", error);
+      });
+  }
 }
-
-//liking a blog
-axios
-  .post(
-    `https://myportifolio-brand-backend.onrender.com/single-blog/65e7124ea6d906ebe396345f/like`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  )
-  .then((response) => {
-    console.log("blog liked successfully:", response.data);
-  })
-  .catch((error) => {
-    console.error("Error occured while liking blog", error);
-  });
-
-//sharing a blog
-axios
-  .post(
-    `https://myportifolio-brand-backend.onrender.com/single-blog/65e7124ea6d906ebe396345f/share`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  )
-  .then((response) => {
-    console.log("blog shared  successfully:", response.data);
-  })
-  .catch((error) => {
-    console.error("Error occured while sharing a blog", error);
-  });
 
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-blogs")
@@ -58,6 +104,7 @@ axios
   .catch((error) => {
     console.error("Error fetching blogs:", error);
   });
+
 //all blogs
 function displayBlogs(response) {
   const blogsContainer = document.getElementById("blogstable");
