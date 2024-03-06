@@ -6,7 +6,10 @@ function displayBlog(response) {
     blg += "<div class=blog1>";
     blg += "<div class=blogs>";
     blg += "<div class=subt>" + blog.title + "</div>";
-    blg += "<p class=blog>" + blog.description + "</p>";
+    blg += "<p class=blog>" + blog.description + "<br/>";
+    blg += "<i class='fa fa-thumbs-up ' id='like' aria-hidden='true'></i>";
+    blg += "<i class='fa fa-comment' aria-hidden='true'></i>";
+    blg += "<i class='fa fa-share' aria-hidden='true'></i></p>";
     blg += "</div>";
     blg += `<img src=${blog.photo} class=images`;
     blg += "</div>";
@@ -14,6 +17,41 @@ function displayBlog(response) {
   });
   bloging.innerHTML = blg;
 }
+
+//liking a blog
+axios
+  .post(
+    `https://myportifolio-brand-backend.onrender.com/single-blog/65e7124ea6d906ebe396345f/like`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+  .then((response) => {
+    console.log("blog liked successfully:", response.data);
+  })
+  .catch((error) => {
+    console.error("Error occured while liking blog", error);
+  });
+
+//sharing a blog
+axios
+  .post(
+    `https://myportifolio-brand-backend.onrender.com/single-blog/65e7124ea6d906ebe396345f/share`,
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+  .then((response) => {
+    console.log("blog shared  successfully:", response.data);
+  })
+  .catch((error) => {
+    console.error("Error occured while sharing a blog", error);
+  });
+
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-blogs")
   .then(displayBlog)
@@ -37,7 +75,7 @@ function displayBlogs(response) {
 }
 
 const tokens =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU3MGQzZGE2ZDkwNmViZTM5NjM0MmQiLCJlbWFpbCI6Im11dG9uaXNAZ21haWwuY29tIiwiaWF0IjoxNzA5NjQxMDQ4LCJleHAiOjE3MDk3Mjc0NDh9.2Xqugt7j0jM1vluBfuGHMXhlujqLj2n6Kon29igpIsA";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU3MWEyNGYxOWFlYTM5YTNkMDE5ZDMiLCJlbWFpbCI6ImphbWVzQGdtYWlsLmNvbSIsImlhdCI6MTcwOTczMDAyMH0.NL-GsGn8adOFAtoNvhMRReaXTDSHU_XcEkKNa7nFo9c";
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-blogs")
   .then(displayBlogs)

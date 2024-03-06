@@ -293,7 +293,7 @@ h3 {
   justify-content: space-between;
   margin-bottom: 20px;
   margin-right: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .blogs {
   padding: 20px;
@@ -302,7 +302,10 @@ h3 {
   border-top-left-radius: 10px;
   width: 100%;
 }
-
+.blog i {
+  margin-right: 20px;
+  margin-top: 20px;
+}
 .images {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
