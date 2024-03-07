@@ -14,8 +14,7 @@ function displayMessages(response) {
   });
   messageCount.innerHTML = response.data.result.length;
 }
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWU3MWEyNGYxOWFlYTM5YTNkMDE5ZDMiLCJlbWFpbCI6ImphbWVzQGdtYWlsLmNvbSIsImlhdCI6MTcwOTczMDAyMH0.NL-GsGn8adOFAtoNvhMRReaXTDSHU_XcEkKNa7nFo9c";
+const token = localStorage.getItem("Usertoken");
 axios
   .get("https://myportifolio-brand-backend.onrender.com/all-messages", {
     headers: {

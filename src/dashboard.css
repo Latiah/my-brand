@@ -66,7 +66,7 @@ top:0;
 }
 .notifications{
    margin-left:250px;
-    padding:20px;
+    padding: 0 20px;
      box-sizing: border-box;
 }
 
@@ -106,9 +106,9 @@ margin-right:20px;
     padding:10px;
 }
 
-.bform{
-    margin-left:30px;
-}
+
+
+
 .Bdescription{
     border:1px solid #fff;
     width:368px;
@@ -226,4 +226,81 @@ border-radius:5px;
     padding: 5px;
     font-size: larger;
     color:white;
+}
+
+
+
+.success {
+    position: fixed;
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 300px;
+    background: rgba(103, 252, 4, 1);
+    z-index: 1000;
+    color: rgb(87, 165, 175); 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+    display: none;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20px;
+    /* align-items: center; */
+    justify-content: center;
+    margin: auto;
+}
+
+.blog-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#description{
+    height: 100px;
+    text-align: start;
+}
+
+.bbtn {
+    border-radius: 10px;
+    border: none;
+    background: aqua;
+    padding: 0;
+    white-space: nowrap;
+    max-width: 200px;
+    width: 100%;
+    margin-left: auto;
+    text-align: center;
+}
+
+.edit-form {
+    background: blue;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.edit-form input {
+    width: 95%;
+}
+
+#edit {
+    text-align: center;
+    font-family: "roboto";
 }
