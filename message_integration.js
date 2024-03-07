@@ -40,36 +40,35 @@ function deleting(messageId) {
   deleteId.style.color = "white";
   deleteId.style.border = "none";
   deleteId.style.borderRadius = "10px";
-  function deleting(messageId) {
-    axios
-      .delete(
-        `https://myportifolio-brand-backend.onrender.com/delete-message/${messageId}`,
-        {
-          headers: {
-            Authorization: "Bearer " + token,
-          },
-        }
-      )
-      .then((response) => {
-        if (response.status === 200) {
-          deleteId.textContent = "Succesfuly deleted ✅";
-          deleteId.style.background = "green";
-          deleteId.style.color = "white";
-          deleteId.style.border = "none";
-          deleteId.style.borderRadius = "10px";
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
+  axios
+    .delete(
+      `https://myportifolio-brand-backend.onrender.com/delete-message/${messageId}`,
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
+    )
+    .then((response) => {
+      if (response.status === 200) {
+        deleteId.textContent = "Succesfuly deleted ✅";
+        deleteId.style.background = "green";
+        deleteId.style.color = "white";
+        deleteId.style.border = "none";
+        deleteId.style.borderRadius = "10px";
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
 
-          // helper()
-        }
-      })
+        // helper()
+      }
+    })
 
-      .catch((error) => {
-        console.error("Error deleting resource:", error);
-      });
-  }
+    .catch((error) => {
+      console.error("Error deleting resource:", error);
+    });
 }
+
 const form = document.getElementById("contactForm");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
