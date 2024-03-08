@@ -180,7 +180,6 @@ async function editBlog(blogId) {
 
   editForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.put(
         `https://myportifolio-brand-backend.onrender.com/update-blog/${blogId}`,
@@ -202,64 +201,63 @@ async function editBlog(blogId) {
   });
 }
 
-// Define helper function to fetch and display blogs
-
 // Function to handle form submission for adding a blog
 const forms = document.getElementById("bform");
 forms.addEventListener("submit", function (event) {
   event.preventDefault();
+  if (validateForm()) {
+    const titleInput = document.getElementById("title");
+    const descriptionInput = document.getElementById("description");
+    const photoInput = document.getElementById("photo");
 
-  const titleInput = document.getElementById("title");
-  const descriptionInput = document.getElementById("description");
-  const photoInput = document.getElementById("photo");
+    const success = document.getElementById("success");
+    const submitBtn = document.getElementById("submt-btn");
 
-  const success = document.getElementById("success");
-  const submitBtn = document.getElementById("submt-btn");
+    const title = titleInput.value;
+    const description = descriptionInput.value;
+    const photo = photoInput.value;
 
-  const title = titleInput.value;
-  const description = descriptionInput.value;
-  const photo = photoInput.value;
+    const BlogData = {
+      title: title,
+      description: description,
+      photo: photo,
+    };
 
-  const BlogData = {
-    title: title,
-    description: description,
-    photo: photo,
-  };
+    submitBtn.style.background = "orange";
+    submitBtn.innerHTML = "Loading";
+    submitBtn.style.color = "white";
 
-  submitBtn.style.background = "orange";
-  submitBtn.innerHTML = "Loading";
-  submitBtn.style.color = "white";
+    axios
+      .post(
+        "https://myportifolio-brand-backend.onrender.com/add-blog",
+        BlogData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + tokens,
+          },
+        }
+      )
+      .then((response) => {
+        submitBtn.innerHTML = "Succes👌";
+        submitBtn.style.background = "green";
+        submitBtn.style.color = "white";
+        success.style.display = "block";
 
-  axios
-    .post(
-      "https://myportifolio-brand-backend.onrender.com/add-blog",
-      BlogData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + tokens,
-        },
-      }
-    )
-    .then((response) => {
-      submitBtn.innerHTML = "Succes👌";
-      submitBtn.style.background = "green";
-      submitBtn.style.color = "white";
-      success.style.display = "block";
+        setTimeout(() => {
+          forms.reset();
+          submitBtn.innerHTML = "Add new Blog";
+          submitBtn.style.background = "";
+          submitBtn.style.color = "";
 
-      setTimeout(() => {
-        forms.reset();
-        submitBtn.innerHTML = "Add new Blog";
-        submitBtn.style.background = "";
-        submitBtn.style.color = "";
-
-        success.style.display = "none";
-        window.location.reload();
-      }, 1700);
-    })
-    .catch((error) => {
-      console.error("Error submitting message:", error);
-    });
+          success.style.display = "none";
+          window.location.reload();
+        }, 1700);
+      })
+      .catch((error) => {
+        console.error("Error submitting message:", error);
+      });
+  }
 });
 
 // Fetch all blogs
@@ -269,3 +267,23 @@ axios
   .catch((error) => {
     console.error("Error fetching blogs:", error);
   });
+
+function validateForm() {
+  var title = document.getElementById("title").value;
+  var description = document.getElementById("description").value;
+  var photo = document.getElementById("photo").value;
+  // Get the input element
+  if (title == "") {
+    alert("a title is required");
+    return false;
+  }
+  if (description == "") {
+    alert("please enter a description!");
+    return false;
+  }
+  if (photo == "") {
+    alert("enter image url ");
+    return false;
+  }
+  return true;
+}

@@ -17,10 +17,11 @@ body {
 }
 .nav {
   display: flex;
-  margin-right: 20px;
+  margin-right: 50px;
+
   justify-content: space-between;
   height: var(--nav-height);
-  padding: 0 20px;
+  padding: 0 10px;
   position: relative;
   margin-top: 20px;
 }

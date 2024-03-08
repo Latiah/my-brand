@@ -1,111 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs management</title>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="src/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <p class="adminTitle">Blogs managements</p>
-  
+
     <div class="navbar">
-        <a href="dashboard.html">
-            <div class="log">
-                <h2>LA</h2>
-            </div>
-        </a>
-        <a href="blogs.html" class="btn1">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs
-        </a><br/>
-        <a href="messages.html" class="btn2">
-            <i class="fa fa-envelope" aria-hidden="true"></i> Messages
-        </a><br/>
-        <a href="index.html" class="btn3">
-            <i class="fa fa-home" aria-hidden="true"></i> Home
-        </a><br/>
-        <a href="login.html" class="btn4">
-            <i class="fa fa-sign-out" aria-hidden="true"></i> Log out
-        </a>
+      <a href="dashboard.html">
+        <div class="log">
+          <h2>LA</h2>
+        </div>
+        <a href="index.html" class="btn3"
+          ><i class="fa fa-home" aria-hidden="true"></i> <span>Home </span></a
+        ><br />
+      </a>
+      <a href="blogs.html" class="btn1">
+        <i class="fa fa-newspaper-o" aria-hidden="true"></i> Manage blogs </a
+      ><br />
+      <a href="messages.html" class="btn2">
+        <i class="fa fa-envelope" aria-hidden="true"></i> Messages </a
+      ><br />
+      <a href="login.html" class="btn4">
+        <i class="fa fa-sign-out" aria-hidden="true"></i> Log out
+      </a>
     </div>
     <div class="notifications">
-      
-        <div class="blogs-section">
+      <div class="blogs-section">
+        <!-- editing blog form -->
 
-          <!-- editing blog form -->
+        <form class="blog-form edit-form" id="edit-blog-form">
+          <label id="edit">Editing Blog</label>
+          <div class="filed">
+            <label>Title</label>
+            <input
+              type="text"
+              placeholder="enter title"
+              name="title"
+              id="edit-title"
+            />
+          </div>
+          <div class="filed">
+            <label>Description</label>
+            <input
+              type="textarea"
+              placeholder="enter description"
+              name="description"
+              id="edit-description"
+            />
+          </div>
+          <div class="filed">
+            <label>Photo</label>
 
-           <form class="blog-form edit-form" id="edit-blog-form">
-            <label id="edit">Editing Blog</label>
-              <div class="filed">
-                <label>Title</label>
-                <input type="text" placeholder="enter title" name="title" required id="edit-title" />
-              </div>
-              <div class="filed">
-                <label>Description</label>
-                <input type="textarea" required placeholder="enter description" name="description" id="edit-description" />
-              </div>
-              <div class="filed">
-                <label>Photo</label>
-                
-                <input type="text"  required="enter image URL" name="photo" id="edit-photo" />
-              </div>
-                
-                
-                
-                <!-- <button onclick="Add()" id="Submit">Add new Blog</button>-->
-                <!-- <button type="submit" class="bbtn" id="submt-btn">Add new Blog</button> -->
-                <input type="submit" class="bbtn" id="submt-edit" value="Update Blog"/>
-                <!-- <button onclick="update()" id="update">Update Blog</button> -->
-            </form>
+            <input type="text" name="photo" id="edit-photo" />
+          </div>
 
-          <!-- editing blog form -->
+          <input
+            type="submit"
+            class="bbtn"
+            id="submt-edit"
+            value="Update Blog"
+          />
+        </form>
 
-            <form class="blog-form" id="bform">
-              <div class="filed">
-                <label>Title</label>
-                <input type="text" placeholder="enter title" name="title" required id="title" />
-              </div>
-              <div class="filed">
-                <label>Description</label>
-                <input type="textarea" required placeholder="enter description" name="description" id="description" />
-              </div>
-              <div class="filed">
-                <label>Photo</label>
-                <!--<label for="photo" class="photo">upload image </label>-->
-                <!--<input type="file" id="fileInput">
-                <img id="previewImage" src="#" alt="Preview Image" style="display: none;">
-                <!--<input type="file" id="photo" class="phot" /><br/>-->
-                <input type="text"  required="enter image URL" name="photo" id="photo" />
-              </div>
-                
-                
-                
-                <!-- <button onclick="Add()" id="Submit">Add new Blog</button>-->
-                <!-- <button type="submit" class="bbtn" id="submt-btn">Add new Blog</button> -->
-                <input type="submit" class="bbtn" id="submt-btn" value="Add new Blog"/>
-                <!-- <button onclick="update()" id="update">Update Blog</button> -->
-            </form>
-            <div class="blogs-written">
-                <table id="blogstable">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th colspan="2"> Actions</th> 
-                        </tr>
-                    </thead>
-                    <tbody> 
-                    </tbody>
-                </table>
-            </div>
+        <!-- editing blog form -->
+
+        <form class="blog-form" id="bform">
+          <div class="filed">
+            <label>Title</label>
+            <input
+              type="text"
+              placeholder="enter title"
+              name="title"
+              id="title"
+            />
+          </div>
+          <div class="filed">
+            <label>Description</label>
+            <input
+              type="textarea"
+              placeholder="enter description"
+              name="description"
+              id="description"
+            />
+          </div>
+          <div class="filed">
+            <label>Photo</label>
+            <input type="text" name="photo" id="photo" />
+          </div>
+          <input
+            type="submit"
+            class="bbtn"
+            id="submt-btn"
+            value="Add new Blog"
+          />
+        </form>
+        <div class="blogs-written">
+          <table id="blogstable">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
-        <!-- <div class="success">Blog A7dde</div> -->
+      </div>
     </div>
-<div class="success" id="success">Blog added succesfuly ✔</div>
-    
-    <!--<script src="script.js"></script>-->
+    <div class="success" id="success">Blog added succesfuly ✔</div>
     <script src="blogs_integration.js"></script>
-</body>
+  </body>
 </html>
